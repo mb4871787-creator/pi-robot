@@ -573,4 +573,4 @@ class SerialNode(BaseNode):
             raw=line,
             parsed=parsed,
             source=source,
-    )
+        )
