@@ -1,0 +1,86 @@
+# ============================================================
+# PI_ROBOT - Central Configuration File
+# ============================================================
+
+serial:
+  base:
+    port: "/dev/ttyACM0"
+    baud_rate: 115200
+    timeout: 1.0
+    retry_attempts: 3
+    retry_delay: 2.0
+  arm:
+    port: "/dev/ttyUSB0"
+    baud_rate: 115200
+    timeout: 1.0
+    retry_attempts: 3
+    retry_delay: 2.0
+
+camera:
+  device_index: 0
+  frame_width: 640
+  frame_height: 480
+  fps: 30
+  backend: "picamera2"
+  flip_horizontal: false
+  flip_vertical: false
+
+vision:
+  min_qr_area: 500
+  center_deadzone: 20
+  target_qr_size: 15000
+  frame_skip: 0
+
+pid:
+  lateral:
+    kp: 0.08
+    ki: 0.001
+    kd: 0.01
+    max_output: 50
+    integral_limit: 100
+  distance:
+    kp: 0.003
+    ki: 0.0001
+    kd: 0.0005
+    max_output: 60
+    integral_limit: 200
+
+robot:
+  base:
+    default_speed: 40
+    turn_speed: 35
+    align_speed: 25
+  arm:
+    pick_sequence:
+      - "ARM:LOWER"
+      - "ARM:GRIP"
+      - "ARM:RAISE"
+    pick_delay: 0.5
+
+  # ── AUTO SEQUENCE TIMING (odometry-driven, GOTO-based) ───────────────────
+  # The sequence itself (waypoints, rotation targets, SEQ box numbers) is
+  # defined in code (decision_node.py) per the autonomous spec — these are
+  # just safety timeouts and a polling interval, not motion durations.
+  auto_sequence:
+    step_timeout_s:    15.0  # max seconds to wait for POS:REACHED on a GOTO
+    rotate_timeout_s:   8.0  # max seconds to wait for a rotation to reach its heading target
+    seq_timeout_s:     20.0  # max seconds to wait for SEQ_DONE on a pick/place
+    pos_poll_period_s:  0.1  # how often to send BASE:POS? while rotating
+
+manual:
+  keyboard_speed: 50
+  keyboard_turn: 40
+
+logging:
+  level: "INFO"
+  log_to_file: true
+  log_dir: "logs"
+  max_file_size_mb: 10
+  backup_count: 5
+  console_output: true
+
+system:
+  mode: "MANUAL"
+  watchdog_timeout: 5.0
+  queue_maxsize: 20
+  shutdown_timeout: 3.0
