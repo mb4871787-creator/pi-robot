@@ -18,7 +18,7 @@ CAD renders of the arm and its base (not photos of the finished robot).
 
 | Isometric | Top (camera mount) | Side |
 |---|---|---|
-| ![Arm isometric view](images/arm_cad_iso.jpg) | ![Arm top view](images/arm_cad_top.jpg) | ![Arm side view](images/arm_cad_side.jpg) |
+| ![Arm isometric view](images/15-arm_cad_iso.jpg) | ![Arm top view](images/16-arm_cad_top.jpg) | ![Arm side view](images/18-arm_cad_side.jpg) |
 
 ### System overview
 
