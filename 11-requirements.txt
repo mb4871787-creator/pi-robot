@@ -1,0 +1,31 @@
+# pi_robot — Python dependencies
+# Install with: pip install -r requirements.txt
+
+# Core dependencies
+opencv-python>=4.8.0        # Camera capture + QR code detection
+pyyaml>=6.0                 # YAML config file parsing
+pyserial>=3.5               # UART serial communication with ESP32
+
+# Optional: better QR/barcode detection
+# pyzbar>=0.1.9             # Alternative QR decoder (requires zbar system lib)
+
+# Optional: enhanced terminal support
+# windows-curses>=2.3       # Windows terminal support (Windows only)
+
+# Development & testing
+pytest>=7.0
+pytest-cov>=4.0
+
+# ── System library notes ──────────────────────────────────────────────────────
+# On Raspberry Pi OS (Debian-based), also install:
+#   sudo apt-get update
+#   sudo apt-get install -y python3-opencv libzbar0
+#
+# For camera support:
+#   sudo apt-get install -y python3-picamera2   (Pi Camera v2/3)
+#   # OR use USB webcam with device_index: 0
+#
+# Enable UART on Raspberry Pi:
+#   sudo raspi-config → Interface Options → Serial Port
+#   Disable login shell, Enable serial port hardware
+#   Add user to dialout group: sudo usermod -a -G dialout $USER
