@@ -2,6 +2,10 @@
 
 A professional, node-based robot control framework for Raspberry Pi + ESP32.
 
+<p align="center">
+  <img src="images/92-robot-field-controller2.jpg" alt="The omni-wheel mobile manipulator with its 3D-printed arm and PS4 controller, on the field" width="360">
+</p>
+
 ---
 
 ## Hardware and Electronics
@@ -12,13 +16,29 @@ with a Raspberry Pi running the Python control stack in this repository. The
 electrical design below comes from the project's PCB design and power-sizing
 documents (Ain Shams University, Mechatronics, Spring 2026).
 
-### CAD
+### Built hardware
 
-CAD renders of the arm and its base (not photos of the finished robot).
+Photos of the finished robot and its assembled control board.
+
+| Assembled ESP32-S3 control board | Arm, side view | Arm, front view |
+|---|---|---|
+| <img src="images/77-pcb-assembled.jpg" alt="Assembled ESP32-S3 control PCB with IMU, motor driver connectors and screw terminals" width="260"> | <img src="images/83-arm-side-view-1.jpg" alt="3D-printed arm with servo gripper, side view" width="260"> | <img src="images/80-arm-side-view-2.jpg" alt="3D-printed arm with servo gripper, front view" width="260"> |
+
+<p align="center">
+  <img src="images/89-robot-held-outdoors.jpg" alt="The robot held by its builder on the university field" width="320">
+</p>
+
+### CAD and PCB renders
+
+CAD renders of the arm, gripper and full robot, and 3D renders of the two PCBs (these are renders, not photos).
 
 | Isometric | Top (camera mount) | Side |
 |---|---|---|
 | ![Arm isometric view](images/15-arm_cad_iso.jpg) | ![Arm top view](images/16-arm_cad_top.jpg) | ![Arm side view](images/18-arm_cad_side.jpg) |
+
+| Full robot | Gripper and camera mount | PCB (ESP32-S3, TB6612 drivers) | PCB (servo and power board) |
+|---|---|---|---|
+| ![Full robot CAD](images/75-cad-render-full-robot.jpg) | ![Gripper and camera CAD](images/70-cad-gripper-camera.jpg) | ![Base PCB 3D render](images/81-pcb-3d-esp32s3-motor-drivers.jpg) | ![Arm PCB 3D render](images/85-pcb-3d-servo-power-board.jpg) |
 
 ### System overview
 
