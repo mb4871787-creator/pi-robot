@@ -18,14 +18,14 @@ documents (Ain Shams University, Mechatronics, Spring 2026).
 
 ### Built hardware
 
-Photos of the finished robot and its assembled control board.
+Photos of the robot prototype and its assembled control board.
 
-| Assembled ESP32-S3 control board | Arm, side view | Arm, front view |
+| Assembled control board | Arm, side view | Arm, front view |
 |---|---|---|
-| <img src="images/77-pcb-assembled.jpg" alt="Assembled ESP32-S3 control PCB with IMU, motor driver connectors and screw terminals" width="260"> | <img src="images/83-arm-side-view-1.jpg" alt="3D-printed arm with servo gripper, side view" width="260"> | <img src="images/80-arm-side-view-2.jpg" alt="3D-printed arm with servo gripper, front view" width="260"> |
+| <img src="images/77-pcb-assembled.jpg" alt="Assembled control board with screw terminals and connectors" width="260"> | <img src="images/83-arm-side-view-1.jpg" alt="3D-printed arm with servo gripper, side view" width="260"> | <img src="images/80-arm-side-view-2.jpg" alt="3D-printed arm with servo gripper, front view" width="260"> |
 
 <p align="center">
-  <img src="images/89-robot-held-outdoors.jpg" alt="The robot held by its builder on the university field" width="320">
+  <img src="images/89-robot-held-outdoors.jpg" alt="The robot prototype held outdoors" width="320">
 </p>
 
 ### CAD and PCB renders
